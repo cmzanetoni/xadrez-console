@@ -11,5 +11,9 @@
             this.tabuleiro = tabuleiro;
             qtdMovimentados = 0;
         }
+
+        public void incrementarQtdMovimentos() {
+            qtdMovimentados++;
+        }
     }
 }

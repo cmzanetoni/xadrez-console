@@ -18,13 +18,25 @@
             return pecas[posicao.linha, posicao.coluna];
         }
 
-        public void setPeca(Peca peca, Posicao posicao) {
+        public void colocarPeca(Peca peca, Posicao posicao) {
             if (existePeca(posicao)) {
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
 
             pecas[posicao.linha, posicao.coluna] = peca;
             peca.posicao = posicao;
+        }
+
+        public Peca retirarPeca(Posicao posicao) {
+            if (getPeca(posicao) == null) {
+                return null;
+            }
+
+            Peca aux = getPeca(posicao);
+            aux.posicao = null;
+            pecas[posicao.linha, posicao.coluna] = null;
+            return aux;
+
         }
 
         public bool posicaoValida(Posicao posicao) {

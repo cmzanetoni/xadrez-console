@@ -5,9 +5,8 @@ using tabuleiro;
 namespace xadrez_console {
     class Program {
         static void Main(string[] args) {
-            Posicao posicao = new Posicao(2, 3);
+            Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
-            Console.WriteLine(posicao);
             Console.ReadLine();
         }
     }

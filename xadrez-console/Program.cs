@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using tabuleiro;
-using xadrez_console.xadrez;
+using xadrez;
 
 namespace xadrez_console {
     class Program {
         static void Main(string[] args) {
+            PosicaoXadrez p = new PosicaoXadrez('A', 1);
+            Console.WriteLine(p);
+            Console.WriteLine(p.toPosicao());
+
             try {
                 Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 

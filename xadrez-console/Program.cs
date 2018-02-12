@@ -12,10 +12,7 @@ namespace xadrez_console {
                 while (!partidaDeXadrez.terminada) {
                     try {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partidaDeXadrez.tabuleiro);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partidaDeXadrez.turno);
-                        Console.WriteLine("Aguardando jogada: " + partidaDeXadrez.jogarAtual);
+                        Tela.imprimirPartida(partidaDeXadrez);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
